@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>关注</title>
+</head>
+<body>
+<br>
+<form action="/follow/" method="post">
+    {% csrf_token %}
+    输入你的手机号码:<input type="text" name="q" style="margin-left:50px;margin-top:20px">
+    <br>
+    输入你要关注的手机号码:<input type="text" name="q2">
+    <input type="submit" value="关注">
+    <p> {{ followRlt }}</p>
+</form>
+
+
+</body>
+</html>

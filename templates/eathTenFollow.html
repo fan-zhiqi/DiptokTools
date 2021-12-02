@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>随机关注10个人</title>
+</head>
+<body>
+<br>
+<form action="/eathTenFollow/" method="post">
+    {% csrf_token %}
+    请输入你的手机号码:<input type="text" name="e">
+    <input type="submit" value="随机加10个好友">
+    <p> {{ rlt }}</p>
+</form>
+
+</body>
+</html>

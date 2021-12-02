@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注销账号</title>
+</head>
+<body>
+    <form action="/cancel/" method="post">
+        {% csrf_token %}
+        输入+86手机号<input type="text" name="q">
+        <input type="submit" value="提交">
+    </form>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    <p style="font-size:25px;color:red">{{ rlt }}</p>
+
+</body>
+</html>

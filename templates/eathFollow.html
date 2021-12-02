@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>相互关注</title>
+</head>
+<body>
+<br>
+<form action="/eathFollow/" method="post">
+    {% csrf_token %}
+    输入你的手机号码:<input type="text" name="w" style="margin-left:33px;margin-top:20px">
+    <br>
+    输入你要加的手机号码:<input type="text" name="w2">
+    <input type="submit" value="互相关注">
+    <p> {{ eathFollowRlt }}</p>
+</form>
+
+</body>
+</html>

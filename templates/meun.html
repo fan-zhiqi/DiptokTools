@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页面</title>
+</head>
+<body>
+<!--#用户注销-->
+    <form action="/cancel/" method="post">
+        {% csrf_token %}
+        输入注销的+86手机号码<input type="text" name="q">
+        <input type="submit" value="提交">
+    </form>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    <p style="font-size:25px;color:red">{{ rlt }}</p>
+
+<!--#查询手机号码，用户id，区号-->
+        <!--<form action="/search_user/" method="post">-->
+        <!--{% csrf_token %}-->
+        <!--搜索手机号码，用户id，区号<input type="text" name="q">-->
+        <!--<input type="submit" value="搜索">-->
+    <!--</form>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+    <!--{%if result == '手机号码为空' %}-->
+        <!--<p>{{ result }}</p>-->
+    <!--{% else %}-->
+          <!--{% for i,y,z in result %}-->
+            <!--<tr align="lift">-->
+                <!--<td>用户名</td>-->
+                <!--<td>用户ID</td>-->
+                <!--<td>区号</td>-->
+            <!--</tr>-->
+            <!--<tr align="lift">-->
+                <!--<u>{{ i }}</u>-->
+                <!--<u>{{ y }}</u>-->
+                <!--<u>{{ z }}</u>-->
+            <!--</tr>-->
+
+    <!--{% endfor %}-->
+    <!--{% endif%}-->
+
+    <br>
+<!--#查看用户信息-->
+     <form action="/userInfo/" method="get">
+         <br>
+        <input type="submit" value="搜索用户信息">
+
+    </form>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+<!--#登录-->
+
+    <form action="/login/" method="post">
+        {% csrf_token %}
+        <br>
+        <br>
+       用户登录<input type="text" name="q">
+        <input type="submit" value="登录">
+    </form>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        <p>{{ loginRlt }}</p>
+
+
+
+<!--#关注-->
+    <form action="/follow/" method="post">
+            {% csrf_token %}
+        输入你的手机号码:<input type="text" name="q" style="margin-left:50px;margin-top:50px">
+        <br>
+        输入你要关注的手机号码:<input type="text" name="q2">
+        <input type="submit" value="关注">
+    </form>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+    <form action="/eathFollow/" method="post">
+        {% csrf_token %}
+        输入你的手机号码:<input type="text" name="w" style="margin-left:33px;margin-top:0px">
+        <br>
+        输入你要加的手机号码:<input type="text" name="w2">
+        <input type="submit" value="互相关注">
+    </form>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    <br>
+    <form action="/eathTenFollow/" method="post">
+        {% csrf_token %}
+        请输入你的手机号码:<input type="text" name="e">
+        <input type="submit" value="随机加10个好友">
+    </form>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    <form action="/eathFollow1/" method="post">
+        {% csrf_token %}
+        输入你的手机号码:<input type="text" name="w" style="margin-left:33px;margin-top:0px">
+        <br>
+        输入你要加的区号853手机号码:<input type="text" name="w2">
+        <input type="submit" value="互相关注">
+    </form>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+</body>
+</html>
